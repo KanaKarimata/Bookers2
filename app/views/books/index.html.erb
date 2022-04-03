@@ -1,0 +1,38 @@
+<!DOTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="books.scss" />
+    <title>WebCampBackendNew</title>
+  </head>
+  
+  <body>
+    <h1>Books</h1>
+    <table>
+      <thead>
+        <th>Title</th>
+        <th>Body</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h2>New Book</h2>
+
+    <%= form_with model: @book do |f| %>
+    
+    <p>Title</p>
+    <%= f.text_field :title %>
+
+    <p>Body</p>
+    <%= f.text_area :body %>
+
+    <%= f.submit 'Create Book' %>
+
+    <% end %>
+  </body>
+</html>
