@@ -1,3 +1,7 @@
+<% if flash[:destroy] %>
+<p><%= flash[:destroy] %></p>
+<% end %>
+
 <h1>Books</h1>
   <table>
     <thead>
@@ -20,7 +24,7 @@
   <h2>New Book</h2>
   
     <% if @book.errors.any? %>
-     <%= @book.errors.count %>件のエラーが発生しました
+     <%= @book.errors.count %>errors prohibited this book from being save:
      <ul>
        <% @book.errors.full_messages.each do |message| %>
        <li><%= message %></li>
