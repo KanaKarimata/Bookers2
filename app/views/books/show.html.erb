@@ -1,3 +1,11 @@
+<% if flash[:update] %>
+ <p><%= flash[:update]%></p>
+ <% end %>
+
+<% if flash[:create] %>
+ <p><%= flash[:create]%></p>
+ <% end %>
+ 
 <h5>Title:
 <span><%= @book.title%></span>
 </h5>
